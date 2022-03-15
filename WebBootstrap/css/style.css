@@ -1,0 +1,67 @@
+.maTable{
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+
+  border: black 5px solid;
+}
+
+.divTableau1{
+  display: flex;
+}
+#divTElem11{
+  background-color: cyan;
+  flex: auto;
+}
+#divTElem12{
+  background-color: yellow;
+  flex: auto;
+}
+#divTElem13{
+  background-color: green;
+  flex: auto;
+}
+
+.divTableau2{
+  background-color: red;
+}
+
+.divTableau3{
+  display: flex;
+}
+#divTElem31{
+  background-color: cyan;
+  flex: auto;
+}
+#divTElem32{
+  background-color: green;;
+  flex: auto;
+}
+
+
+
+
+.custom-line
+{
+  min-height: 5rem;
+  margin-bottom: 1rem;
+  background-color: RGBa(60,240,160,0.7); /*Vert*/
+}
+.custom-line > .col-3, .custom-line > .col-4{
+   background-color: RGBa(60,120,240,0.7); /*Bleu*/
+ }
+
+ .rowX
+ {
+   min-height: 5rem;
+   background-color: RGBa(60,120,240,0.7); /*Bleu*/
+ }
+ .colX{
+   background-color: RGBa(60,240,160,0.7); /*Vert*/
+   background-clip: content-box;
+ }
+
+ .border-2{
+   border-width: 2em!important;
+ }

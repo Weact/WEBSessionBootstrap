@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Bootstrap CSS</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Creating a bootstrap template. -->
+  <link rel="stylesheet" type="text/css" href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css>
+  <script src=https://code.jquery.com/jquery-3.3.1.slim.min.js></script>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js></script>
+  <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js></script>
+
+  <script src="javascript/script.js"></script>
+
+</head>
+
+<body style="background-color: black; color: white;">
+
+  <h1>Création d'une grille avec des colonnes de même largeur</h1>
+
+  <div class="maTable">
+    <div class="divTableau1">
+      <div id="divTElem11">
+        1er élément
+      </div>
+      <div id="divTElem12">
+        2ème élément
+      </div>
+      <div id="divTElem13">
+        3ème élément
+      </div>
+    </div>
+
+    <div class="divTableau2">
+      L'élément occupe toute la ligne
+    </div>
+
+    <div class="divTableau3">
+      <div id="divTElem31">
+        1er élément de la 3ème ligne
+      </div>
+      <div id="divTElem32">
+        2élément de la 3ème ligne
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <hr>
+
+  <!-- Creating a grid with 12 columns. -->
+  <h1>Création d'une grille avec bootstrap</h1>
+  <br>
+  <div
+    class="container-fluid border rounded-pill border-primary text-primary text-center text-uppercase font-weight-bolder ">
+    <span>Bootstrap reprend le principe flexbox sur 12 colonnes</span><br>
+    <span>L'axe principale est horizontale</span><br>
+    <span>Classe bootstrap pour le flex : row/col-2 col-6 col-12 [...]</span><br>
+    <span>Les colonnes personnalisés rajoutent un padding(marge intérieure) gauche et droit appelées les goutières. La
+      taille par défaut des marges est de 15px</span><br>
+    <span>Pour supprimer les goutières, on peut se servir de la classe no-gutters</span><br>
+    <span>^ https://getbootstrap.com/docs/5.0/layout/gutters/ ^</span><br>
+  </div>
+
+  <br><br><br>
+
+  <div class="container text-light text-center text-uppercase font-weight-bolder">
+    <div class="container row">
+      <div class="col bg-info">
+        <!-- col suffit mais s'adapte aux nombres d'éléments, col-4 ici -->
+        1er élément
+      </div>
+      <div class="col bg-warning">
+        <!-- col suffit mais s'adapte aux nombres d'éléments, col-4 ici -->
+        2ème élément
+      </div>
+      <div class="col bg-success">
+        <!-- col suffit mais s'adapte aux nombres d'éléments, col-4 ici -->
+        3ème élément
+      </div>
+    </div>
+
+    <div class="container row">
+      <div class="col bg-danger">
+        <!-- col suffit mais s'adapte aux nombres d'éléments, col-12 ici -->
+        L'élément occupe toute la ligne
+      </div>
+    </div>
+
+    <div class="container row">
+      <div class="col bg-info">
+        <!-- col suffit mais s'adapte aux nombres d'éléments, col-6 ici -->
+        1er élément de la 3ème ligne
+      </div>
+      <div class="col bg-success">
+        <!-- col suffit mais s'adapte aux nombres d'éléments, col-6 ici -->
+        2ème élément de la 3ème ligne
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <hr>
+
+  <h1>Bootstrap - Élément de taille différentes</h1>
+
+  <div class="container text-light text-center text-uppercase font-weight-bolder">
+    <div class="container row">
+      <div class="col-2 bg-info">
+        1er élément: class col-2, 2 colonnes de base
+      </div>
+      <div class="col-4 bg-warning">
+        2ème élément: class col-4, 4 colonnes de base
+      </div>
+      <div class="col-6 bg-success">
+        3ème élément: class col-6, 6 colonnes de base
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <hr>
+
+  <h1>Dépassement limite colonnes</h1>
+
+  <div class="container text-light text-center text-uppercase font-weight-bolder">
+    <div class="container row">
+      <div class="col-6 bg-info">
+        1er élément: class col-6, 6 colonnes de base
+      </div>
+      <div class="col-4 bg-warning">
+        2ème élément: class col-4, 4 colonnes de base
+      </div>
+      <div class="col-6 bg-success">
+        3ème élément: class col-6, 6 colonnes de base
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <hr>
+
+  <h1>Mélange de nombre de colonnes explicites et implicites</h1>
+
+  <div class="container text-light text-center text-uppercase font-weight-bolder">
+    <div class="container row">
+      <div class="col-4 bg-info">
+        1er élément: class col-4, 4 colonnes de base
+      </div>
+      <div class="col bg-warning">
+        2ème élément: class col, 12-4-6 colonnes de base
+      </div>
+      <div class="col-6 bg-success">
+        3ème élément: class col-6, 6 colonnes de base
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <hr>
+
+  <h1>Modification de la disposition des colonnes en fonction de la taille de l'écran : responsive</h1>
+
+  <div class="container text-light text-center text-uppercase font-weight-bolder">
+    <div class="container row mt-5">
+      <div class="col-md-3 bg-info">
+        1er élément: class col-4
+      </div>
+      <div class="col-md-6 bg-warning">
+        2ème élément: class col
+      </div>
+      <div class="col-md-3 bg-success">
+        3ème élément: class col
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container text-light text-center text-uppercase font-weight-bolder">
+    <div class="container row mt-5">
+      <div class="col-4 col-md-3 bg-info">
+        1er élément: class col-4
+      </div>
+      <div class="col-12 col-md-6 bg-warning">
+        2ème élément: class col
+      </div>
+      <div class="col-12 col-md-3 bg-success">
+        3ème élément: class col
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container text-light text-center text-uppercase font-weight-bolder">
+    <div class="container row mt-5">
+      <div class="col-12 col-md-3 col-lg-4 bg-info">
+        1er élément: class col-4
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 bg-warning">
+        2ème élément: class col
+      </div>
+      <div class="col-12 col-md-3 col-lg-4 bg-success">
+        3ème élément: class col
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container border border-danger text-light text-uppercase font-weight-bolder">
+    <div class="row bg-danger justify-content-start custom-line">
+      <div class="col-4">
+        col start 1/2
+      </div>
+      <div class="col-4">
+        col start 2/2
+      </div>
+    </div>
+
+    <div class="row bg-danger custom-line justify-content-center">
+      <div class="col-4">
+        col center 1/2
+      </div>
+      <div class="col-4">
+        col center 2/2
+      </div>
+    </div>
+
+    <div class="row bg-danger custom-line justify-content-end">
+      <div class="col-4">
+        col end 1/2
+      </div>
+      <div class="col-4">
+        col end 2/2
+      </div>
+    </div>
+
+    <div class="row bg-danger custom-line justify-content-around">
+      <div class="col-4">
+        col around 1/2
+      </div>
+      <div class="col-4">
+        col around 2/2
+      </div>
+    </div>
+
+    <!-- Creating a row with 3 columns, each with a different background color. -->
+    <div class="row bg-danger custom-line justify-content-between">
+      <div class="col-3">
+        col between 1/3
+      </div>
+      <div class="col-3">
+        col between 2/3
+      </div>
+      <div class="col-3">
+        col between 3/3
+      </div>
+    </div>
+
+    <!-- Creating a row with 3 columns, each with a different background color. -->
+    <div class="row rowX bg-danger custom-line justify-content-between">
+      <div class="col-3 colX">
+        col between 1/3
+      </div>
+      <div class="col-3 colX">
+        col between 2/3
+      </div>
+      <div class="col-3 colX">
+        col between 3/3
+      </div>
+    </div>
+
+    <!-- Creating a row with 3 columns, each column is 1/3 the size of the row. -->
+    <div class="row rowX bg-danger custom-line justify-content-between no-gutters">
+      <div class="col-3 colX">
+        col between 1/3
+      </div>
+      <div class="col-3 colX">
+        col between 2/3
+      </div>
+      <div class="col-3 colX">
+        col between 3/3
+      </div>
+    </div>
+
+    <!-- Creating a row with 5 columns. -->
+    <div class="row bg-danger custom-line justify-content-start no-gutters">
+      <div class="col-4">
+        col start 1/5
+      </div>
+      <div class="col-4">
+        col start 2/5
+      </div>
+      <div class="col-4">
+        col start 3/5
+      </div>
+      <div class="w-100"></div>
+      <div class="col-4">
+        col start 4/5
+      </div>
+      <div class="col-4">
+        col start 5/5
+      </div>
+    </div>
+
+    <div class="row bg-danger custom-line no-gutters">
+      <div class="col">
+        col around 1/5
+      </div>
+      <div class="w-100"></div>
+      <div class="col">
+        col around 2/5
+      </div>
+      <div class="col">
+        col around 3/5
+      </div>
+      <div class="col">
+        col around 4/5
+      </div>
+      <div class="col">
+        col around 5/5
+      </div>
+    </div>
+
+    <div class="row bg-danger custom-line no-gutters justify-content-end">
+      <div class="col order-12">
+        col around 1/5
+      </div>
+      <div class="col order-2">
+        col around 2/5
+      </div>
+
+      <div class="col order-1">
+        col around 4/5
+      </div>
+      <div class="col order-3">
+        col around 5/5
+      </div>
+    </div>
+
+    <div class="row bg-danger custom-line no-gutters">
+      <div class="col order-6">
+        order 6
+      </div>
+      <div class="col">
+        no order 1
+      </div>
+      <div class="col order-2">
+        order 2
+      </div>
+      <div class="col">
+        no order 2
+      </div>
+    </div>
+
+    <div class="row bg-danger custom-line no-gutters">
+      <div class="col order-last">
+        first
+      </div>
+      <div class="col order-first">
+        last
+      </div>
+    </div>
+
+    <div class="row border border-dark bg-danger custom-line">
+      <div class="col bg-info">
+        COL 1
+        <div class="row border border-dark">
+          NESTED 1
+          <div class="w-100"></div>
+          <div class="col bg-success">
+            NESTED COL 1
+          </div>
+          <div class="col bg-danger">
+            NESTED COL 2
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row border border-dark bg-danger custom-line">
+      <div class="col bg-success">
+        COL 1
+        <div class="row border border-dark">
+          NESTED ROW 1
+          <div class="w-100"></div>
+          <div class="col bg-primary">
+            COL 1 IN NESTED ROW 1 IN COL 1
+          </div>
+          <div class="col bg-secondary">
+            COL 2 IN NESTED ROW 1 IN COL 1
+          </div>
+        </div>
+      </div>
+      <div class="col bg-danger">
+        COL 2
+        <div class="row border border-dark">
+          NESTED ROW 2
+          <div class="w-100"></div>
+          <div class="col bg-warning">
+            COL 1 IN NESTED ROW 2 IN COL 2
+          </div>
+          <div class="col bg-info">
+            COL 2 IN NEXTED ROW 2 IN COL 2
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row border border-success bg-dark custom-line">
+      <div class="col bg-info">
+        COL 1
+        <div class="row border border-success bg-dark">
+          <div class="col bg-warning">
+            NESTED COL 1
+            <div class="row border border-success bg-dark">
+              <div class="col bg-primary">
+                COL PRIMARY NESTED NESTED
+              </div>
+              <div class="col bg-secondary">
+                COL SECONDARY NESTED NESTED
+              </div>
+            </div>
+          </div>
+          <div class="col bg-danger">
+            NESTED COL 2
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container bg-info text-white">
+    <h2 class="display-4">Head Title 4 - Display mode</h2>
+
+    <p>Un simple paragraphe</p>
+    <p class="lead">Un paragraphe avec la classe lead</p>
+    <span>Un paragraphe en <code>code</code></span>
+    <p>Un paragraphe avec un <abbr title="Attribut">attr</abbr> en <abbr title="HyperText Markup Language">HTML</abbr>
+    </p>
+    <p>Texte normal, <span class="font-weight-bolder">text en gras (bolder)</span></p>
+    <blockquote cite="https://getbootstrap.com/docs/4.0/content/typography/">
+      <p class="mb-0">Du css s'appliquant sur du texte, grâce à <span
+          class="font-weight-bolder text-uppercase">Bootstrap</span></p>
+      <!-- m for margin, b for bottom, mb sets margin bottom to 0 -->
+    </blockquote>
+
+    <pre class="pre-scrollable">
+          Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </pre>
+
+    <p class="mb-0">Un texte indiquant qu'il faut appuyer sur <kbd>A</kbd></p>
+    <samp>Sample text</samp>
+    <p class="border border-success">Un paragraphe avec une bordure</p>
+    <p class="border border-0">Une bordure tiret zéro (pas de bordure)</p>
+    <p class="border border-bottom">Une bordure tiret zéro (pas de bordure en bas)</p>
+    <p class="border border-danger m-3 p-4" style="border-width: 30px!important;">paragraphe avec bordure 30px margin 3
+      padding 4</p>
+  </div>
+
+  <div class="container bg-secondary text-white font-weight-bolder p-2" style="width: 100em; height: 10em;">
+    <div class="mx-auto my-auto border border-danger text-align-center"
+      style="width: fit-content; height: fit-content; border-width: 5px!important;">
+      Paragraphe dans un conteneur centré
+    </div>
+  </div>
+
+  <div class="container bg-info mt-3 p-4">
+    <table class="table table-success table-striped table-bordered table-hover table-sm">
+      <caption class="bg-success text-light font-weight-bolder text-center">Tableau des meilleurs élèves (ils utilisent
+        godot tiens tiens tiens bizarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr)</caption>
+      <thead class="thead-light">
+        <tr>
+          <th>#</th>
+          <th>NOM</th>
+          <th>PRENOM</th>
+          <th>EMAIL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>DRUCKES</td>
+          <td>LUCAS</td>
+          <td>D.LUCAS@GMAIL.COM</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>FONDERFLICK</td>
+          <td>VALENTIN</td>
+          <td>F.VALENTIN@GMAIL.COM</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>CORNU</td>
+          <td>LUC</td>
+          <td>C.LUC@GMAIL.COM</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="bg-secondary text-center font-weight-bolder" colspan="4">FIN DU TABLEAU</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="container border border-dark bg-primary mt-3 p-4" style="border-width:5px!important;">
+    <div class="table-responsive-xl">
+      <table class="table table-danger table-striped table-bordered table-hover">
+        <caption class="bg-success text-light font-weight-bolder text-center">Tableau des meilleurs élèves (ils
+          utilisent godot tiens tiens tiens bizarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr)</caption>
+        <thead class="thead-light">
+          <tr>
+            <th>#</th>
+            <th>NOM</th>
+            <th>PRENOM</th>
+            <th>EMAIL</th>
+            <th>#</th>
+            <th>NOM</th>
+            <th>PRENOM</th>
+            <th>EMAIL</th>
+            <th>#</th>
+            <th>NOM</th>
+            <th>PRENOM</th>
+            <th>EMAIL</th>
+            <th>#</th>
+            <th>NOM</th>
+            <th>PRENOM</th>
+            <th>EMAIL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>DRUCKES</td>
+            <td>LUCAS</td>
+            <td>D.LUCAS@GMAIL.COM</td>
+            <th>1</th>
+            <td>DRUCKES</td>
+            <td>LUCAS</td>
+            <td>D.LUCAS@GMAIL.COM</td>
+            <th>1</th>
+            <td>DRUCKES</td>
+            <td>LUCAS</td>
+            <td>D.LUCAS@GMAIL.COM</td>
+            <th>1</th>
+            <td>DRUCKES</td>
+            <td>LUCAS</td>
+            <td>D.LUCAS@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+            <th>2</th>
+            <td>FONDERFLICK</td>
+            <td>VALENTIN</td>
+            <td>F.VALENTIN@GMAIL.COM</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+            <th>3</th>
+            <td>CORNU</td>
+            <td>LUC</td>
+            <td>C.LUC@GMAIL.COM</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="bg-secondary text-center font-weight-bolder" colspan="4">FIN DU TABLEAU</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <div class="container border border-dark bg-success mt-3 mb-3 p-4">
+    <div class="row">
+
+      <div class="col-6 bg-danger">
+        nothing
+        <img class="bg-dark" src="images/MrCold.png" alt="MRCOLD DE XION LEAK">
+      </div>
+      <div class="col-6 bg-warning">
+        rounded
+        <img class="rounded bg-dark" src="images/MrStonks.png" alt="MRSTONKS DE XION LEAK">
+      </div>
+
+      <div class="col-6 bg-info">
+        rounded circle + float left
+        <img class="bg-dark rounded-circle float-left" src="images/MrCold.png" alt="MRCOLD DE XION LEAK">
+      </div>
+      <div class="col-6 bg-primary">
+        1px round + float right
+        <img class="img_thumbnail bg-dark float-right" src="images/MrStonks.png" alt="MRSTONKS DE XION LEAK">
+      </div>
+      <div class="w-100"></div>
+      <div class="col-6 bg-dark">
+        <img class="rounded-circle mx-auto d-block bg-success" src="images/MrCold.png" alt="MRCOLD DE XION LEAK">
+      </div>
+      <div class="col-6 bg-dark">
+        <picture>
+          <source srcset="" type="image/svh+xml">
+          <img class="rounded-circle bg-success" src="images/MrStonks.png" alt="MRSTONKS DE XION LEAK">
+        </picture>
+      </div>
+
+    </div>
+    <br>
+  </div>
+
+  <div class="container border border-dark bg-info" style="height: 50em; width: 50em;">
+    <img class="img_thumbnail bg-info float-right p-2" style="width:30%;" src="images/MrStonks.png"
+      alt="MRSTONKS DE XION LEAK">
+    <img class="img_thumbnail bg-info float-center p-2" style="width:30%;" src="images/MrCold.png"
+      alt="MRCOLD DE XION LEAK">
+    <figure>
+      <img src="images/MrStonks.png" class="figure-img img-fluid rounded bg-primary mx-auto mt-auto d-block "
+        style="width: 25%; height: 25%;" alt="MRSTONKS DE XION LEAK">
+      <figcaption class="figure-caption">figure caption de mrstonks</figcaption>
+    </figure>
+  </div>
+
+  <div class="container border border-dark bg-warning mt-3 mb-3 p-3">
+    <button type="button" name="button" class="btn btn-success btn-lg">Large Success button</button>
+    <button type="button" name="button" class="btn btn-info btn-sm">Small Info button</button>
+    <button type="button" name="button" class="btn btn-secondary btn-lg">Large Secondary button</button>
+    <button type="button" name="button" class="btn btn-danger btn-sm">Small Danger button</button>
+    <button type="button" name="button" class="btn btn-outline-primary btn-lg">Large Outline Primary button</button>
+    <button type="button" name="button" class="btn btn-primary btn-block btn-sm">Primary Block Button</button>
+    <button type="button" name="button" class="btn btn-primary btn-block" disabled>Primary Block Disabled
+      Button</button>
+
+    <a href="#" class="btn btn-info btn-block">Block Href btn style block</a>
+    <a href="#" class="btn btn-info btn-lg disable">Disabled Href btn style block</a>
+
+    <br>
+
+    <!-- GROUPE DE BOUTON -->
+    <div class="btn-group mt-5" role="group" aria-label="RadioGroupNormal">
+      <label class="btn btn-secondary" for="radio1">
+        <input type="radio" name="radionormal" id="radio1" value="radioOption1" autocomplete="off" checked> Radio 1
+      </label>
+
+      <label class="btn btn-secondary" for="radio2">
+        <input type="radio" name="radionormal" id="radio2" value="radioOption2" autocomplete="off"> Radio 2
+      </label>
+
+      <label class="btn btn-secondary" for="radio3">
+        <input type="radio" name="radionormal" id="radio3" value="radioOption3" autocomplete="off"> Radio 3
+      </label>
+    </div>
+
+    <!-- GROUPE DE BOUTON SMALL -->
+    <div class="btn-group-sm mt-5" role="group" aria-label="RadioGroupSmall">
+      <label class="btn btn-secondary" for="radio1SM">
+        <input type="radio" name="radioSM" id="radio1SM" value="radioOption1" autocomplete="off" checked> Radio 1 SM
+      </label>
+
+      <label class="btn btn-secondary" for="radio2SM">
+        <input type="radio" name="radioSM" id="radio2SM" value="radioOption2" autocomplete="off"> Radio 2 SM
+      </label>
+
+      <label class="btn btn-secondary" for="radio3SM">
+        <input type="radio" name="radioSM" id="radio3SM" value="radioOption3" autocomplete="off"> Radio 3 SM
+      </label>
+    </div>
+
+    <!-- GROUPE DE BOUTON VERTICAL -->
+    <div class="btn-group-vertical mt-5" role="group" aria-label="RadioGroupVertical">
+      <label class="btn btn-secondary" for="radio1V">
+        <input type="radio" name="radioV" id="radio1V" value="radioOption1" autocomplete="off" checked> Radio 1 V
+      </label>
+
+      <label class="btn btn-secondary" for="radio2V">
+        <input type="radio" name="radioV" id="radio2V" value="radioOption2" autocomplete="off"> Radio 2 V
+      </label>
+
+      <label class="btn btn-secondary" for="radio3V">
+        <input type="radio" name="radioV" id="radio3V" value="radioOption3" autocomplete="off"> Radio 3 V
+      </label>
+    </div>
+
+    <!-- GROUPE DE BOUTON VERTICAL -->
+    <div class="dropdown mt-5">
+      <button class="btn btn-primary dropdown-toggle" type="button" name="buttonDrop" id="buttonDropMenu"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Selection</button>
+      <div class="dropdown-menu" aria-labelledby="buttonDropMenu">
+        <a class="dropdown-item" href="#">Option Drop Menu 1</a>
+        <a class="dropdown-item" href="#">Option Drop Menu 2</a>
+        <a class="dropdown-item" href="#">Option Drop Menu 3</a>
+        <a class="dropdown-item" href="#">Option Drop Menu 4</a>
+        <a class="dropdown-item" href="#">Option Drop Menu 5</a>
+        <a class="dropdown-item" href="#">Option Drop Menu 6</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container border border-dark bg-secondary mt-3 mb-3 p-3 text-light">
+    <h3 class="display-3">Les listes</h3>
+
+    <!-- The above code is creating a list of items with a class of list-group. -->
+    <h5 class="display-5 mt-5 font-size-4">- Simple | Element actif | Element desactive</h5>
+    <ul class="list-group text-primary font-weight-bolder">
+      <li class="list-group-item">Basket Ball</li>
+      <li class="list-group-item">Foot Ball</li>
+      <li class="list-group-item disabled" aria-disabled="true">Hand Ball [disabled item]</li>
+      <li class="list-group-item">Tennis</li>
+      <li class="list-group-item active">Natation [active item]</li>
+    </ul>
+
+    <!-- The above code is creating a list of links. -->
+    <h5 class="display-5 mt-5">- Liste de liens</h5>
+    <div class="list-group text-primary font-weight-bolder">
+      <a href="https://godotengine.org/" class="list-group-item list-group-item-action active">
+        Godot [active item]
+      </a>
+
+      <a href="https://unity.com/" class="list-group-item list-group-item-action">Unity</a>
+      <a href="https://www.unrealengine.com/en-US/  " class="list-group-item list-group-item-action">Unreal
+        Engine</a>
+      <a href="https://www.construct.net/en" class="list-group-item list-group-item-action">Construct</a>
+      <a href="https://www.yoyogames.com/en/gamemaker" class="list-group-item list-group-item-action disabled"
+        tabindex="-1" aria-disabled="true">Game Maker [Disabled item]</a>
+    </div>
+
+    <!-- Creating a list of buttons. -->
+    <h5 class="display-5 mt-5">- Liste de boutons</h5>
+    <div class="list-group text-primary font-weight-bolder">
+      <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+        Godot bouton [active item]
+      </button>
+
+      <button class="list-group-item list-group-item-action">Unity bouton</button>
+      <button class="list-group-item list-group-item-action">Unreal Engine bouton</button>
+      <button class="list-group-item list-group-item-action" disabled>Construct bouton [Disabled item]</button>
+      <button class="list-group-item list-group-item-action">Game Maker bouton</button>
+    </div>
+
+    <!-- Creating a list of items. -->
+    <h5 class="display-5 mt-5">- Liste &ltflushed&gt / pas de bordure</h5>
+    <ul class="list-group list-group-flush text-primary font-weight-bolder">
+      <li class="list-group-item active">AAAAAAAAAA</li>
+      <li class="list-group-item">BBBBBBBBBB</li>
+      <li class="list-group-item">CCCCCCCCCC</li>
+      <li class="list-group-item">DDDDDDDDDD</li>
+      <li class="list-group-item">EEEEEEEEEE</li>
+    </ul>
+
+    <!-- The above code is creating a list of items with a horizontal layout. -->
+    <h5 class="display-5 mt-5">- Liste horizontale (avec breakpoint : xl)</h5>
+    <ul class="list-group list-group-horizontal-xl text-primary font-weight-bolder">
+      <li class="list-group-item">6 * 2 = 12</li>
+      <li class="list-group-item">x = 4</li>
+      <li class="list-group-item">4 + 6 = 10</li>
+      <li class="list-group-item">y = 3</li>
+      <li class="list-group-item">7 + x = 11</li>
+      <li class="list-group-item">a = x * y / y</li>
+      <li class="list-group-item">b = x * x² / (x + 5)</li>
+      <li class="list-group-item">c = x * y² / (y + 5)</li>
+    </ul>
+
+    <!-- The above code is creating a list of items with different colors. -->
+    <h5 class="display-5 mt-5">- Liste colorée</h5>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-primary">-6(7x + 8) = −13(−6 + 3x)</li>
+      <li class="list-group-item list-group-item-secondary">−10(−4x − 5) = −118</li>
+      <li class="list-group-item list-group-item-success">-9(−11 − 5x) = 153</li>
+      <li class="list-group-item list-group-item-danger">1.1 = 1.4 + x</li>
+      <li class="list-group-item list-group-item-info">−6x + 15 = 11.4</li>
+      <li class="list-group-item list-group-item-light">13 − 20x = −7x + 52</li>
+    </ul>
+
+    <!-- The above code is creating a list of links with different colors. -->
+    <h5 class="display-5 mt-5">- Liste liens colorés</h5>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action">He ran out of money, so he had to stop playing
+        poker.</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-primary">The knives were out and she was
+        sharpening hers.</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">She hadn't had her cup of
+        coffee, and that made things all the worse.</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-success">When he had to picnic on the
+        beach, he purposely put sand in other people’s food.</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Blue sounded too cold at the
+        time and yet it seemed to work for gin.</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-warning">I've traveled all around Africa
+        and still haven't found the gnu who stole my scarf.</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-info">On each full moon</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-light">It was a really good Monday for
+        being a Saturday.</a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-dark">With a single flip of the coin,
+        his life changed forever.</a>
+    </div>
+
+    <!-- Creating a list of colored buttons. -->
+    <h5 class="display-5 mt-5">- Liste de boutons colorés</h5>
+    <div class="list-group text-primary font-weight-bolder">
+      <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+        Godot bouton [active item]
+      </button>
+
+      <button class="list-group-item list-group-item-action list-group-item-primary">Unity bouton</button>
+      <button class="list-group-item list-group-item-action list-group-item-danger">Unreal Engine bouton</button>
+      <button class="list-group-item list-group-item-action list-group-item-info" disabled>Construct bouton [Disabled
+        item]</button>
+      <button class="list-group-item list-group-item-action list-group-item-success">Game Maker bouton</button>
+    </div>
+
+    <!-- Creating a list of badges. -->
+    <h5 class="display-5 mt-5">- Liste de badge</h5>
+    <ul class="list-group text-primary font-weight-bolder">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Hello [between]
+        <span class="badge badge-primary badge-pill">6</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-around align-items-center">
+        Hi [around]
+        <span class="badge badge-warning badge-pill">82</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-center align-items-center">
+        Hhhhhhhhhh [center]
+        <span class="badge badge-danger badge-pill">129</span>
+      </li>
+    </ul>
+
+    <!-- The above code is creating a list of items with a title and a description. -->
+    <h5 class="display-5 mt-5">- Listes personnalisées</h5>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Titre du premier élément de la liste personnalisé</h5>
+          <small>Il y a 3 heures</small>
+        </div>
+        <p class="mb-1">Guest Of New Earth</p>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Titre du deuxième élément de la liste personnalisé</h5>
+          <small class="text-muted">Il y a 7 heures</small>
+        </div>
+        <p class="mb-1">Director Of The Sun</p>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Titre du troisième élément de la liste personnalisé</h5>
+          <small class="text-muted">Il y a 10 minutes</small>
+        </div>
+        <p class="mb-1">Clones Of The Flight</p>
+      </a>
+    </div>
+
+    <!-- The above code is creating a horizontal tabbed interface. -->
+    <h5 class="display-5 mt-5">Elements interactifs</h5>
+    <div class="row">
+      <!-- The code above is creating a list of tabs that will be used to navigate through the different
+      pages of the website. -->
+      <div class="col-4">
+        <div class="list-group list-group-horizontal-xl" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#home"
+            role="tab" aria-controls="home">Home</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#profile"
+            role="tab" aria-controls="profile">Profile</a>
+          <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#messages"
+            role="tab" aria-controls="messages">Messages</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#settings"
+            role="tab" aria-controls="settings">Paramètres</a>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="tab-content font-weight-bolder text-warning ml-5" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="list-home-list"
+            style="font-size: 2rem!important;">Bienvenu !</div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="list-profile-list"
+            style="font-size: 2rem!important;">
+            Weact
+            <small class="text-success">compte créé il y a 7 jours</small>
+          </div>
+          <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="list-messages-list"
+            style="font-size: 2rem!important;">
+            <span class="float-left">Messages non lus</span>
+            <span class="float-right badge badge-info badge-pill">182</span>
+          </div>
+          <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="list-settings-list"
+            style="font-size: 2rem!important;">Paramètres
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forms -->
+  <div class="container border border-dark bg-dark mt-3 mb-3 p-3 text-light">
+    <h5 class="display-5">Les formulaires</h5>
+
+    <!-- A form with checkboxes. -->
+    <form class="font-weight-bolder">
+      <!-- Creating a form with a name input field. -->
+      <div class="form-group">
+        <label for="inputName">Nom</label>
+        <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp"
+          placeholder="Entrez votre nom">
+        <small id="nameHelp" class="form-text">Votre nom</small>
+      </div>
+      <!-- Creating a form with a text input for the user to enter their first name. -->
+      <div class="form-group">
+        <label for="inputFName">Prénom</label>
+        <input type="text" class="form-control" id="inputFName" aria-describedby="fnameHelp"
+          placeholder="Entrez votre prénom">
+        <small id="fnameHelp" class="form-text">Votre prénom</small>
+      </div>
+      <!-- Creating a form with a email input field. -->
+      <div class="form-group">
+        <label for="inputMail">EMail</label>
+        <input type="text" class="form-control" id="inputMail" aria-describedby="mailHelp"
+          placeholder="Entrez votre email">
+        <small id="mailHelp " class="form-text">Votre email</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" class="form-control" id="password" aria-describedby="passHelp">
+        <small id="passHelp" class="form-text">Votre mot de passe</small>
+      </div>
+      <!-- Creating a slider that allows the user to select an age range. -->
+      <div class="form-group">
+        <label for="ageRange">Âge</label>
+        <input type="range" class="form-control-range" id="ageRange" min="1" max="99" step="0.1">
+      </div>
+      <div class="form-group">
+        <label for="inputPlaintext">Champ en plaintext</label>
+        <input type="text" class="form-control-plaintext" id="inputPlaintext" aria-describedby="plaintextHelp"
+          placeholder="Entrez un truc inutile">
+        <small id="plaintextHelp " class="form-text">Un champ en plaintext complètement inutile</small>
+      </div>
+
+      <!-- The above code is creating a fieldset with checkboxes for each sport. -->
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Sports</legend>
+          <div class="col">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="sportBasket">
+              <label for="sportBasket">BasketBall</label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="sportFoot">
+              <label for="sportFoot">FootBall</label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="sportTennis">
+              <label for="sportTennis">Tennis</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Creating a dropdown menu. -->
+      <div class="form-group">
+        <label for="selectFood">Nourriture</label>
+        <select class="form-control" id="selectFood">
+          <option>Hamburger</option>
+          <option>Pizza</option>
+          <option>Lasagne</option>
+          <option>Tacos</option>
+          <option>Pâtes</option>
+        </select>
+      </div>
+
+      <!-- Creating a multiple select form element. -->
+      <div class="form-group">
+        <label for="multipleSubjects">Matières (plusieurs réponses sont possibles)</label>
+        <select multiple class="form-control" id="multipleSubjects">
+          <option>Mathématiques</option>
+          <option>Français</option>
+          <option>Sciences</option>
+          <option>Philosophie</option>
+          <option>Physique|Chimie</option>
+        </select>
+      </div>
+
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Type de joueur</legend>
+          <div class="col">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="playerType" id="CasualPlayer" value="Casual">
+              <label class="form-check-label" for="CasualPlayer">Joueur Occasionnel</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="playerType" id="MidcorePlayer" value="Midcore">
+              <label class="form-check-label" for="MidcorePlayer">Joueur Midcore</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="playerType" id="HardcorePlayer" value="Hardcore">
+              <label class="form-check-label" for="HardcorePlayer">Joueur Hardcore</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <div class="form-row">
+          <legend class="col-form-label col-sm-4 pt-0">Informations supplémentaires 1ère partie</legend>
+          <div class="col-sm-12 col-lg-4">
+            <input type="text" class="form-control" id="chienrace" placeholder="Race de chien">
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <input type="text" class="form-control" id="chienname" placeholder="Nom de chien">
+          </div>
+        </div>
+      </fieldset>
+      <!-- Creating a form with a submit button. -->
+      <button type="submit" class="btn btn-primary">Valider</button>
+    </form>
+
+    <br><br><br>
+
+    <form action="#" class="font-weight-bolder needs-validation" novalidate>
+      <fieldset class="form-group border border-light rounded p-3" style="border-width: 5px!important;">
+        <div class="form-row">
+          <legend class="col-form-label col pt-0" style="font-size:2rem!important;">Formulaire compact</legend>
+          <div class="w-100"></div>
+          <div class="form-group col-md-6">
+            <label for="userfirstname">Prénom</label>
+            <input type="text" class="form-control" id="userfirstname" placeholder="Prénom" required>
+            <div class="valid-feedback">GG</div>
+            <div class="invalid-feedback">PLEASE ENTER VALID FIRST NAME</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="username">Nom de famille</label>
+            <input type="text" class="form-control" id="username" placeholder="Nom" required>
+            <div class="valid-feedback">GG</div>
+            <div class="invalid-feedback">PLEASE ENTER VALID NAME</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="usermail">Adresse Mail</label>
+          <input type="email" class="form-control" id="usermail" placeholder="n.prenom@mail.com" required>
+          <div class="valid-feedback">GG</div>
+          <div class="invalid-feedback">PLEASE ENTER VALID FIRST MAIL</div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="userusername">Username</label>
+            <input type="text" class="form-control" id="userusername" placeholder="Xx_DarkSasukeDu67_xX" required>
+            <div class="valid-feedback">GG</div>
+            <div class="invalid-feedback">PLEASE ENTER VALID FIRST USERNAME</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="userpassword">Password</label>
+            <input type="password" class="form-control" id="userpassword" required>
+            <div class="valid-feedback">GG</div>
+            <div class="invalid-feedback">PLEASE ENTER VALID PASSWORD</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputState">Pays</label>
+          <select id="inputState" class="form-control" required>
+            <option selected>France</option>
+            <option>Italie</option>
+            <option>Allemagne</option>
+            <option>Portugal</option>
+            <option>Espawn</option>
+          </select>
+          <div class="valid-feedback">GG</div>
+          <div class="invalid-feedback">PLEASE CHOSE VALID COUNTRY</div>
+        </div>
+        <div class="form-group">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="allowShareData">
+            <label class="custom-control-label" for="allowShareData">Allow the company to share the data</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="termsAgreed" id="termsChecker" required>
+            <label class="form-check-label" for="termsChecker">
+              Agree to terms and conditions
+            </label>
+            <div class="valid-feedback">Thanks for agreeing to our terms and conditions !</div>
+            <div class="valid-tooltip">Yes, that's it, agree to our terms hmmm...</div>
+            <div class="invalid-feedback">
+              Please, agree to terms and conditions before submitting your datas.
+            </div>
+            <div class="invalid-tooltip">AGREE TO TERMS OR ME DESTROY COMPUTER</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-5 p-3" id="validateCompactForm">Valider compact</button>
+      </fieldset>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
