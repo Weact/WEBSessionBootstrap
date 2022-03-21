@@ -11,11 +11,13 @@
     <script src=https://code.jquery.com/jquery-3.3.1.slim.min.js></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js></script>
     <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js></script>
+
+    <script src="javascript/script.js"></script>
 </head>
 
 <body class="bg-secondary">
 
-    <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-primary">
+    <nav class="autohide navbar navbar-expand-xl fixed-top navbar-dark bg-primary" id="customscrollablenavbar">
         <a href="#" class="navbar-brand">
             <img src="images/MrCold.png" width="48" height="48" alt="">
             Ma navbar brand
@@ -70,26 +72,96 @@
         </div>
     </nav>
 
-    <nav style="margin-top: 5rem;" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Oui</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Element actif</li>
-        </ol>
-    </nav>
+    <div class="container justify-content-start float-left m-2 p-5">
+        <nav style="margin-top: 5rem;" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Oui</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Element actif</li>
+            </ol>
+        </nav>
 
-    <nav aria-label="Articles" class="mt-4 text-center">
-        <h4 class="display-4">Pagination avec échelle large centrée</h4>
-        <ul class="pagination pagination-lg justify-content-center">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item active"><a class="page-link" href="#">2</a></li>
-            <li class="page-item disabled"><a class="page-link" href="#">3 desactive</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-    </nav>
+        <nav aria-label="Articles" class="mt-4 text-center">
+            <h4 class="display-4">Pagination avec échelle large centrée</h4>
+            <ul class="pagination pagination-lg justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">3 desactive</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
 
-    <div class="fixed-bottom">
+        <nav id="navbar-nested-spy" class="navbar navbar-light bg-light">
+            <a href="#" class="navbar-brand">Ecrits</a>
+            <nav class="nav nav-pills flex-column">
+                <a href="#item-1" class="nav-link">Les jeux vidéos</a>
+                <nav class="nav nav-pills flex-column">
+                    <a href="#item-1-1" class="nav-link ml-3 my-1">Valorant</a>
+                    <a href="#item-1-2" class="nav-link ml-3 my-1">Rocket League</a>
+                </nav>
+                <a class="nav-link" href="#item-2">Les films</a>
+                <a class="nav-link" href="#item-3">Les sports</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ml-3 my-1" href="#item-3-1">Le basketball</a>
+                    <a class="nav-link ml-3 my-1" href="#item-3-2">Le football</a>
+                </nav>
+            </nav>
+        </nav>
+
+        <div data-spy="scroll" data-target="#navbar-nested-spy" data-offset="0">
+            <h4 id="item-1">Les Jeux Vidéos</h4>
+            <p>jeux vidéos sont des jeux vidéos</p>
+            <h5 id="item-1-1">Valorant</h5>
+            <p>Le jeu vidéo est valorant fps multijoueur riot games</p>
+            <h5 id="item-1-2">Rocket League</h5>
+            <p>Le jeu vidéo est rocket league jeu de foot voiture piou piou psyonix</p>
+            <h4 id="item-2">Les films</h4>
+            <p>Les films sont des films oui</p>
+            <h4 id="item-3">Les sports</h4>
+            <p>Les sports sont des sports oui</p>
+            <h5 id="item-3-1">Basketball</h5>
+            <p>BASKETBALL TROP BIEN</p>
+            <h5 id="item-3-2">Football</h5>
+            <p>Hopital simulator</p>
+        </div>
+
+        <nav id="navbar-example3" class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#item-1">Item 1</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ml-3 my-1" href="#item-1-1">Item 1-1</a>
+                    <a class="nav-link ml-3 my-1" href="#item-1-2">Item 1-2</a>
+                </nav>
+                <a class="nav-link" href="#item-2">Item 2</a>
+                <a class="nav-link" href="#item-3">Item 3</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
+                    <a class="nav-link ml-3 my-1" href="#item-3-2">Item 3-2</a>
+                </nav>
+            </nav>
+        </nav>
+
+        <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+            <h4 id="item-1">Item 1</h4>
+            <p>...</p>
+            <h5 id="item-1-1">Item 1-1</h5>
+            <p>...</p>
+            <h5 id="item-1-2">Item 1-2</h5>
+            <p>...</p>
+            <h4 id="item-2">Item 2</h4>
+            <p>...</p>
+            <h4 id="item-3">Item 3</h4>
+            <p>...</p>
+            <h5 id="item-3-1">Item 3-1</h5>
+            <p>...</p>
+            <h5 id="item-3-2">Item 3-2</h5>
+            <p>...</p>
+        </div>
+    </div>
+
+    <div class="autohide fixed-bottom" id="navbarFooterInformation">
         <div class="collapse" id="navbarCollapseInformation">
             <div class="bg-dark p-4">
                 <h5 class="text-white h4">Auteur du site</h5>
