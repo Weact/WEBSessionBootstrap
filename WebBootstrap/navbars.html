@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navbars Bootstrap</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css"
+        href=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css>
+    <script src=https://code.jquery.com/jquery-3.3.1.slim.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js></script>
+    <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js></script>
+</head>
+
+<body class="bg-secondary">
+
+    <nav class="navbar navbar-expand-xl fixed-top navbar-dark bg-primary">
+        <a href="#" class="navbar-brand">
+            <img src="images/MrCold.png" width="48" height="48" alt="">
+            Ma navbar brand
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div class="navbar-nav mr-auto navbar-nav-scroll" style="height: 100%!important">
+                <a class="nav-link active" href="../index.html">Acceuil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">A propos</a>
+                <a class="nav-link" href="#">Ludus</a>
+                <a class="nav-link disabled">Element desactive</a>
+
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownChoixSport" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
+                        Choix de sports
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropDownChoixSport">
+                        <a class="dropdown-item" href="#">Basket</a>
+                        <a class="dropdown-item" href="#">Foot</a>
+                        <a class="dropdown-item" href="#">F1</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-nav">
+                <form class="form-inline">
+                    <div class="input-group ml-3 mr-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="userusernameform">@</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="userusernameform" id="userusername" name="userusername">
+                    </div>
+
+                    <div class="input-group ml-3 mr-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="userpasswordform">*</span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                            aria-describedby="userpasswordform" id="userpassword" name="userpassword">
+                    </div>
+
+                    <button class="btn btn-outline-success" type="submit">Login</button>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+    <nav style="margin-top: 5rem;" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Oui</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Element actif</li>
+        </ol>
+    </nav>
+
+    <nav aria-label="Articles" class="mt-4 text-center">
+        <h4 class="display-4">Pagination avec échelle large centrée</h4>
+        <ul class="pagination pagination-lg justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item disabled"><a class="page-link" href="#">3 desactive</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+
+    <div class="fixed-bottom">
+        <div class="collapse" id="navbarCollapseInformation">
+            <div class="bg-dark p-4">
+                <h5 class="text-white h4">Auteur du site</h5>
+                <span class="text-primary">Lucas "Weact" DRUCKES - Etudiant LUDUS Académie</span><br>
+                <span class="text-muted">Pratique Bootstrap</span>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark justify-content-start">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseInformation"
+                aria-controls="navbarCollapseInformation" aria-expanded="false" aria-label="Toggle Information">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="text-primary ml-5" style="font-size: 2em!important;">Information Auteur</div>
+        </nav>
+    </div>
+
+
+
+</body>
+
+</html>
